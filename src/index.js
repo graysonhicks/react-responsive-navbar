@@ -28,7 +28,7 @@ class ResponsiveMenu extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      showMenu: false
+      showMenu: this.props.showMenu ? this.props.showMenu : false
     };
   }
 
@@ -68,7 +68,8 @@ ResponsiveMenu.propTypes = {
   smallMenuClassName: PropTypes.string,
   changeMenuOn: PropTypes.string.isRequired,
   menuOpenButton: PropTypes.node.isRequired,
-  menuCloseButton: PropTypes.node.isRequired
+  menuCloseButton: PropTypes.node.isRequired,
+  showMenu: PropTypes.bool
 };
 
 ResponsiveMenu.defaultProps = {
